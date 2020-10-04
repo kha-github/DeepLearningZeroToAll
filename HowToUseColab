@@ -1,0 +1,16 @@
+코랩 사용법
+
+1. 구글 드라이브 마운트
+from google.colab import drive
+drive.mount('/gdrive', force_remount=True)
+
+2. 구글 드라이브에서 파일 업로드해오기
+import numpy as np
+dataset = np.loadtxt("/gdrive/My Drive/Colab Notebooks/pima-indians-diabetes.csv", delimiter=",")
+print(dataset)
+
+텐서플로우 버전 변경하기
+-> 텐서플로우 버전이 1.x일때와 2.x일 때 사용방법이 많이 달라서 예제가 에러남
+!pip uninstall tensorflow
+!pip install tensorflow==1.15
+
